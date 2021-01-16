@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>New Pokemon</title>
+  </head>
+  <body>
+    <div>
+      <a href="/">Back</a>
+      <br>
+      <br>
+      <form method="POST" action=<%= "/editPokemon/" + _id%>>
+        <label for="nationalNumber">National Dex Number</label>
+        <input name="nationalNumber" id="nationalNumber" value=<%=nationalNumber%>>
+        <br>
+        <label for="name">Name</label>
+        <input name="name" id="name" value=<%= name%>>
+        <br>
+        <label> Primary Type</label>
+        <input name="primaryType" id="primaryType" value=<%=primaryType%>>
+        <br>
+        <label> Secondary Type</label>
+        <input name="secondaryType" id="secondaryType" value=<%=secondaryType%>>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <br>
+      <form method="POST" action=<%= "/deletePokemon/" + _id%>>
+        <input type="submit" value="Delete">
+      </form>
+    </div>
+  </body>
+</html>

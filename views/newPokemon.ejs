@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>New Pokemon</title>
+  </head>
+  <body>
+    <div>
+      <a href="/">Back</a>
+      <br>
+      <br>
+      <form method="POST" action="/addPokemon">
+        <label for="nationalNumber">National Dex Number</label>
+        <input name="nationalNumber" id="nationalNumber">
+        <br>
+        <label for="name">Name</label>
+        <input name="name" id="name">
+        <br>
+        <label> Primary Type</label>
+        <input name="primaryType" id="primaryType">
+        <br>
+        <label> Secondary Type</label>
+        <input name="secondaryType" id="secondaryType">
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

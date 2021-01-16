@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pokemon Site</title>
+    <link rel="stylesheet" href="/style/home.css">
+  </head>
+  <body>
+    <h1>List of Pokemon</h1>
+    <form method="GET" action="/newPokemon">
+      <input type="submit" value="Create New">
+    </form>
+    <br>
+    <table>
+      <thead>
+        <th>National Dex No.</th>
+        <th>Pokemon Name</th>
+        <th>Primary Type</th>
+        <th>Secondary Type</th>
+      </thead>
+      <% for (let pokemon of pokemonList) { %>
+        <tr>
+          <td><%= pokemon.nationalNumber %></td>
+          <td><%= pokemon.name %></td>
+          <td><%= pokemon.primaryType %></td>
+          <td><%= pokemon.secondaryType %></td>
+          <td><a href=<%= "/pokemon/" + pokemon._id %>>Edit</a></td>
+        </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
